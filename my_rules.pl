@@ -15,7 +15,7 @@ inDanger(X,W):- infected(X,B), antivirus(X,A), A<B.
 inDanger(X,W):- contact(X,Y),nonmember(X,W), inDanger(Y,[X|W]),antivirus(X,C), infected(Y,B), antivirus(Y,A),(A<B,C<B). 
 inDanger(X,W):- contact(Y,X),nonmember(X,W), inDanger(Y,[X|W]),antivirus(X,C), infected(Y,B), antivirus(Y,A),(A<B,C<B). 
 
-% path rules provided by Ivan
+% path rules provided by Ivan via email. thanks!
 path(X,Y):-path(X,Y,[X]).
 
 path(X,X,Visited).
